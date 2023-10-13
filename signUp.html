@@ -1,0 +1,39 @@
+
+
+ ----- signUp---
+
+<a name="SignUp"></a>
+<section class="section_form_user">
+    <div class="inner_container">
+        <h1 class="titre_h1">SignUp</h1>
+        <form action="#login_erreur" method="post" enctype="multipart/form-data" class="form login_form clearfix">
+            <div class="img_login"></div>
+            <div class="clearfix">
+                <label>nom_complet</label><br/>
+                <input type="text" name="login_user" placeholder="login d'user" required="required" value ="<?php echo (isset($_POST['login_user']))? $_POST['login_user'] : ''?>"/>
+            </div>
+            <div class="clearfix">
+                <label>Email</label><br/>
+                <input type="email" name="email" placeholder="Email" required="required" value ="<?php echo (isset($_POST['Email']))? $_POST['mot_de_passe'] : '' ?>"/>
+
+            </div>
+              <div class="clearfix">
+                <label> Mot de Passe</label><br/>
+                <input type="password" name="password" placeholder="mot de passe" required="required" value ="<?php echo (isset($_POST['pass']))? $_POST['mot_de_passe'] : '' ?>"/>
+                
+            </div>
+              <div class="clearfix">
+                <label>Numero de telephone </label><br/>
+                <input type="tel" name="telephone" placeholder="Numero de telephone" required="required" value ="<?php echo (isset($_POST['mot_de_passe']))? $_POST['mot_de_passe'] : '' ?>"/>
+                
+            </div>
+            <div class="clearfix">
+                <input type="submit" name="submit" value="Inscrire">
+            </div>
+        </form>
+    </div>
+</section>
+<?php
+require_once(APP_LOCATION.DS."template".DS."footer.php");
+?>
+
